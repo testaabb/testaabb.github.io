@@ -5,8 +5,8 @@ auto: true
 markdown: redcarpet
 pygments: true
 paginate: 10
-title : JingWooaaa
-tagline: 春华秋实dd。。。
+title : 首页
+tagline: 
 
 author :
   name : jingwoo
