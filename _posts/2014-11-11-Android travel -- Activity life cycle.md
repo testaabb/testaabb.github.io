@@ -16,13 +16,13 @@ excerpt: >
 
 ####先来说说各个方法吧：
 
-  onCreate():创建Activity时被回调，只会被调用一次。  
-  onStart():启动Activity时被回调。  
-  onRestart()：重启Activity被回调。  
-  onResume():恢复Activity时被回调，此时Activity进入活动状态。注:onStart()方法之后一定会回调此方法。  
-  onPause():暂停（Activity页面失去焦点）Activity时被回调，暂停状态。  
-  onStop():停止Activity时被回调，停止状态。  
-  onDestory():销毁Activity时被回调，销毁状态。  
+onCreate():创建Activity时被回调，只会被调用一次。  
+onStart():启动Activity时被回调。  
+onRestart()：重启Activity被回调。  
+onResume():恢复Activity时被回调，此时Activity进入活动状态。注:onStart()方法之后一定会回调此方法。  
+onPause():暂停（Activity页面失去焦点）Activity时被回调，暂停状态。  
+onStop():停止Activity时被回调，停止状态。  
+onDestory():销毁Activity时被回调，销毁状态。  
 不理解没关系，继续往下看。  
 
 ####再来按照箭头说说流程：
