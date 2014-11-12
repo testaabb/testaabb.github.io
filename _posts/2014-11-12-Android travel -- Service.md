@@ -24,6 +24,12 @@ public int onStartCommand(Intent intent, int flags, int startId) {
   return mStartCompatibility ? START_STICKY_COMPATIBILITY : START_STICKY;
 }
 ```
+```javascript
+  var ihubo = {
+    nickName  : "草依山",
+    site : "http://jser.me"
+  }
+```
 
 现在来看右边的图：
 右边是绑定的: onCreate() --> onBind() --> onUnbind() --> onDestory();
