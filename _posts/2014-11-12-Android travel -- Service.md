@@ -1,49 +1,49 @@
-ï»¿---
+---
 layout: post
-title: AndroidÖ®ÂÃ£¨¶þ£© -- ËÄ´ó×é¼þÖ®Service
+title: Androidä¹‹æ—…ï¼ˆäºŒï¼‰ -- å››å¤§ç»„ä»¶ä¹‹Service
 category: Android
 tags: [Android]
 excerpt: >
-  Ëµ¹ýÁËActivityµÄÉúÃüÖÜÆÚ£¬½ñÌìÀ´ËµËµService¡£serviceÊÇÓëActivity×îÏàËÆµÄ×é¼þ£¬ËüÃÇ¶¼ÐèÒª¼Ì³Ð¸¸Àà£¬¶¼ÐèÒªÔÚ
+  è¯´è¿‡äº†Activityçš„ç”Ÿå‘½å‘¨æœŸï¼Œä»Šå¤©æ¥è¯´è¯´Serviceã€‚serviceæ˜¯ä¸ŽActivityæœ€ç›¸ä¼¼çš„ç»„ä»¶ï¼Œå®ƒä»¬éƒ½éœ€è¦ç»§æ‰¿çˆ¶ç±»ï¼Œéƒ½éœ€è¦åœ¨
 ---
 
-Ëµ¹ýÁËActivityµÄÉúÃüÖÜÆÚ£¬½ñÌìÀ´ËµËµService¡£
+è¯´è¿‡äº†Activityçš„ç”Ÿå‘½å‘¨æœŸï¼Œä»Šå¤©æ¥è¯´è¯´Serviceã€‚
 
-ServiceÊÇÓëActivity×îÏàËÆµÄ×é¼þ£¬ËüÃÇ¶¼ÐèÒª¼Ì³Ð¸¸Àà£¬¶¼ÐèÒªÔÚAndroidManifest.xmlÖÐÅäÖÃ£¬Çø±ð¾ÍÊÇserviceÃ»ÓÐ½çÃæ¡£ÔÚÓÅÏÈ¼¶ÉÏ£¬Service±È²»»îÔ¾µÄActivity¸ß¡£
+Serviceæ˜¯ä¸ŽActivityæœ€ç›¸ä¼¼çš„ç»„ä»¶ï¼Œå®ƒä»¬éƒ½éœ€è¦ç»§æ‰¿çˆ¶ç±»ï¼Œéƒ½éœ€è¦åœ¨AndroidManifest.xmlä¸­é…ç½®ï¼ŒåŒºåˆ«å°±æ˜¯serviceæ²¡æœ‰ç•Œé¢ã€‚åœ¨ä¼˜å…ˆçº§ä¸Šï¼ŒServiceæ¯”ä¸æ´»è·ƒçš„Activityé«˜ã€‚
 
-####ÏÈÀ´ËµËµServiceµÄÉúÃüÖÜÆÚ£¬ServiceµÄÉúÃüÖÜÆÚÏà±ÈÓÚActivityÀ´Ëµ¼òµ¥Ò»µã£¬¿´Í¼
+####å…ˆæ¥è¯´è¯´Serviceçš„ç”Ÿå‘½å‘¨æœŸï¼ŒServiceçš„ç”Ÿå‘½å‘¨æœŸç›¸æ¯”äºŽActivityæ¥è¯´ç®€å•ä¸€ç‚¹ï¼Œçœ‹å›¾
 
 ![_config.yml]({{ site.baseurl }}/images/Service life cycle.png)  
 
-×ó±ßÊÇ·Ç°ó¶¨µÄ: onCreate() --> onStartCommand() --> onDestory();
-    onStartCommand()ÊÇÓÃÀ´Ìæ»»onStart()·½·¨µÄ£¬¹È¸è½¨Òé´ó¼ÒÓÃÐÂ·½·¨onStartCommand(),µ«Èç¹ûÄãÈ¥²é¿´Ô´Âë£¬»á·¢ÏÖÆäÊµonStartCommand()·½·¨ÊÇ½´×ÏµÄ: ¹ØÓÚonStartCommand()·µ»ØÖµµÄÎÊÌâ½ÓÏÂÀ´ÔÙËµ¡£
+å·¦è¾¹æ˜¯éžç»‘å®šçš„: onCreate() --> onStartCommand() --> onDestory();
+    onStartCommand()æ˜¯ç”¨æ¥æ›¿æ¢onStart()æ–¹æ³•çš„ï¼Œè°·æ­Œå»ºè®®å¤§å®¶ç”¨æ–°æ–¹æ³•onStartCommand(),ä½†å¦‚æžœä½ åŽ»æŸ¥çœ‹æºç ï¼Œä¼šå‘çŽ°å…¶å®žonStartCommand()æ–¹æ³•æ˜¯é…±ç´«çš„: å…³äºŽonStartCommand()è¿”å›žå€¼çš„é—®é¢˜æŽ¥ä¸‹æ¥å†è¯´ã€‚
 ``` java
 public int onStartCommand(Intent intent, int flags, int startId) {
     onStart(intent, startId);
     return mStartCompatibility ? START_STICKY_COMPATIBILITY : START_STICKY;
 }
 ```
-ÏÖÔÚÀ´¿´ÓÒ±ßµÄÍ¼£º
-ÓÒ±ßÊÇ°ó¶¨µÄ: onCreate() --> onBind() --> onUnbind() --> onDestory();
+çŽ°åœ¨æ¥çœ‹å³è¾¹çš„å›¾ï¼š
+å³è¾¹æ˜¯ç»‘å®šçš„: onCreate() --> onBind() --> onUnbind() --> onDestory();
 
-ÔÚServiceµÄÉúÃüÖÜÆÚÖÐ£¬onCreate()·½·¨Ö»»á±»µ÷ÓÃÒ»´Î¡£¶øonStartCommand()·½·¨¿ÉÒÔ±»µ÷ÓÃ¶à´Î£¬onBind()µÈ·½·¨Ò²Ö»ÄÜµ÷ÓÃÒ»´Î£¬¼òµ¥À´Ëµ£¬³ýÁËonStartCommand()·½·¨Íâ£¬ÆäËû·½·¨ÔÚÒ»¸öÉúÃüÖÜÆÚÖÐÖ»ÄÜ±»µ÷ÓÃÒ»´Î¡£
+åœ¨Serviceçš„ç”Ÿå‘½å‘¨æœŸä¸­ï¼ŒonCreate()æ–¹æ³•åªä¼šè¢«è°ƒç”¨ä¸€æ¬¡ã€‚è€ŒonStartCommand()æ–¹æ³•å¯ä»¥è¢«è°ƒç”¨å¤šæ¬¡ï¼ŒonBind()ç­‰æ–¹æ³•ä¹Ÿåªèƒ½è°ƒç”¨ä¸€æ¬¡ï¼Œç®€å•æ¥è¯´ï¼Œé™¤äº†onStartCommand()æ–¹æ³•å¤–ï¼Œå…¶ä»–æ–¹æ³•åœ¨ä¸€ä¸ªç”Ÿå‘½å‘¨æœŸä¸­åªèƒ½è¢«è°ƒç”¨ä¸€æ¬¡ã€‚
 
-####ÏÂÃæÀ´ËµËµÈç¹ûÁ½Õß»ìµ½Ò»ÆðµÄÇé¿ö
-´ËÊ±Ö»Òª¼Ç×¡ÓÐbindµÄÊ±ºò²»ÄÜstop;
-Èç¹ûµ÷ÓÃÁËstartService()£¬ÔòÖ»ÄÜÔÚbindÎªÁãÊ±ÓÃstopServivce()À´½áÊøService;
+####ä¸‹é¢æ¥è¯´è¯´å¦‚æžœä¸¤è€…æ··åˆ°ä¸€èµ·çš„æƒ…å†µ
+æ­¤æ—¶åªè¦è®°ä½æœ‰bindçš„æ—¶å€™ä¸èƒ½stop;
+å¦‚æžœè°ƒç”¨äº†startService()ï¼Œåˆ™åªèƒ½åœ¨bindä¸ºé›¶æ—¶ç”¨stopServivce()æ¥ç»“æŸService;
 
 ####IntendService
 
-ServiceÔËÐÐÔÚUIÏß³ÌÖÐ£¬²»ÄÜ·ÃÎÊÍøÂç£¬Ò²²»ÄÜ½øÐÐºÄÊ±µÄ²Ù×÷£¬·ñÔò»á³öÏÖANR¡£ËùÒÔ³öÏÖÁËIntenService¡£
-IntentServiceÊÇÒ»¸ö´¦ÀíÒì²½ÇëÇóµÄÀà£¬ËüÊÇServiceµÄ×ÓÀà£¬ÎÒÃÇ¿ÉÒÔÍ¬ÑùÊ¹ÓÃstartService(intent)À´¿ªÆôËü£¬È»ºóÖØÐ´IntentServiceÖÐµÄonHandleIntent()·½·¨À´Ö´ÐÐÒ»Ð©ºÄÊ±²Ù×÷¡£
-ÐèÒª×¢ÒâµÄÊÇ£¬IntentServiceÀàÀïÃæÍ¬ÑùÓÐonStartCommand()·½·¨£¬ÄãÒ²¿ÉÒÔÖØÐ´onStartCommand()·½·¨£¬ÕâÓëÆÕÍ¨ServiceÀàÊÇÒ»ÑùµÄ¡£ÔÚIntentServiceÖÐ£¬onStartCommand()·½·¨ÏÈÓÚonHandleIntent()·½·¨Ö´ÐÐ¡£onHandleIntent()·½·¨»áÔÚËüÖ´ÐÐ½áÊøºó×Ô¶¯Ïú»Ù¡£
+Serviceè¿è¡Œåœ¨UIçº¿ç¨‹ä¸­ï¼Œä¸èƒ½è®¿é—®ç½‘ç»œï¼Œä¹Ÿä¸èƒ½è¿›è¡Œè€—æ—¶çš„æ“ä½œï¼Œå¦åˆ™ä¼šå‡ºçŽ°ANRã€‚æ‰€ä»¥å‡ºçŽ°äº†IntenServiceã€‚
+IntentServiceæ˜¯ä¸€ä¸ªå¤„ç†å¼‚æ­¥è¯·æ±‚çš„ç±»ï¼Œå®ƒæ˜¯Serviceçš„å­ç±»ï¼Œæˆ‘ä»¬å¯ä»¥åŒæ ·ä½¿ç”¨startService(intent)æ¥å¼€å¯å®ƒï¼Œç„¶åŽé‡å†™IntentServiceä¸­çš„onHandleIntent()æ–¹æ³•æ¥æ‰§è¡Œä¸€äº›è€—æ—¶æ“ä½œã€‚
+éœ€è¦æ³¨æ„çš„æ˜¯ï¼ŒIntentServiceç±»é‡Œé¢åŒæ ·æœ‰onStartCommand()æ–¹æ³•ï¼Œä½ ä¹Ÿå¯ä»¥é‡å†™onStartCommand()æ–¹æ³•ï¼Œè¿™ä¸Žæ™®é€šServiceç±»æ˜¯ä¸€æ ·çš„ã€‚åœ¨IntentServiceä¸­ï¼ŒonStartCommand()æ–¹æ³•å…ˆäºŽonHandleIntent()æ–¹æ³•æ‰§è¡Œã€‚onHandleIntent()æ–¹æ³•ä¼šåœ¨å®ƒæ‰§è¡Œç»“æŸåŽè‡ªåŠ¨é”€æ¯ã€‚
 
-####¿ç½ø³Ìµ÷ÓÃService
-
-
+####è·¨è¿›ç¨‹è°ƒç”¨Service
 
 
-####ServiceÓÅÏÈ¼¶
+
+
+####Serviceä¼˜å…ˆçº§
 
 
 
