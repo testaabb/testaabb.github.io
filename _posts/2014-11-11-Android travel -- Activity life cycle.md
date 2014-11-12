@@ -15,6 +15,7 @@ excerpt: >
 ![_config.yml]({{ site.baseurl }}/images/Activity life cycle.gif)  
 
 ####先来说说各个方法吧：
+
 onCreate():创建Activity时被回调，只会被调用一次。  
 onStart():启动Activity时被回调。  
 onRestart()：重启Activity被回调。  
