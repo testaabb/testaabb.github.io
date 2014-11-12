@@ -17,12 +17,14 @@ Service是与Activity最相似的组件，它们都需要继承父类，都需�
 
 左边是非绑定的: onCreate() --> onStartCommand() --> onDestory();
     onStartCommand()是用来替换onStart()方法的，谷歌建议大家用新方法onStartCommand(),但如果你去查看源码，会发现其实onStartCommand()方法是酱紫的: 关于onStartCommand()返回值的问题接下来再说。
+
 ``` java
 public int onStartCommand(Intent intent, int flags, int startId) {
   onStart(intent, startId);
   return mStartCompatibility ? START_STICKY_COMPATIBILITY : START_STICKY;
 }
 ```
+
 现在来看右边的图：
 右边是绑定的: onCreate() --> onBind() --> onUnbind() --> onDestory();
 
