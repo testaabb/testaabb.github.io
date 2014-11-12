@@ -15,7 +15,7 @@ Service是与Activity最相似的组件，它们都需要继承父类，都需要在AndroidManifest.xml
 
 ####先来说说Service的生命周期，Service的生命周期相比于Activity来说简单一点，看图
 
-![Alt text](./1415768381287.png)
+![_config.yml]({{ site.baseurl }}/images/Service life cycle.png)  
 
 左边是非绑定的: onCreate() --> onStartCommand() --> onDestory();
     onStartCommand()是用来替换onStart()方法的，谷歌建议大家用新方法onStartCommand(),但如果你去查看源码，会发现其实onStartCommand()方法是酱紫的: 关于onStartCommand()返回值的问题接下来再说。
