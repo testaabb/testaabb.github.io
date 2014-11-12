@@ -1,4 +1,4 @@
----
+ï»¿---
 layout: post
 title: AndroidÖ®ÂÃ£¨¶ş£© -- ËÄ´ó×é¼şÖ®Service
 category: Android
@@ -6,6 +6,57 @@ tags: [Android]
 excerpt: >
   Ëµ¹ıÁËActivityµÄÉúÃüÖÜÆÚ£¬½ñÌìÀ´ËµËµService¡£serviceÊÇÓëActivity×îÏàËÆµÄ×é¼ş£¬ËüÃÇ¶¼ĞèÒª¼Ì³Ğ¸¸Àà£¬¶¼ĞèÒªÔÚ
 ---
+
+Ëµ¹ıÁËActivityµÄÉúÃüÖÜÆÚ£¬½ñÌìÀ´ËµËµService¡£
+
+ServiceÊÇÓëActivity×îÏàËÆµÄ×é¼ş£¬ËüÃÇ¶¼ĞèÒª¼Ì³Ğ¸¸Àà£¬¶¼ĞèÒªÔÚAndroidManifest.xmlÖĞÅäÖÃ£¬Çø±ğ¾ÍÊÇserviceÃ»ÓĞ½çÃæ¡£ÔÚÓÅÏÈ¼¶ÉÏ£¬Service±È²»»îÔ¾µÄActivity¸ß¡£
+
+####ÏÈÀ´ËµËµServiceµÄÉúÃüÖÜÆÚ£¬ServiceµÄÉúÃüÖÜÆÚÏà±ÈÓÚActivityÀ´Ëµ¼òµ¥Ò»µã£¬¿´Í¼
+
+![_config.yml]({{ site.baseurl }}/images/Service life cycle.png)  
+
+×ó±ßÊÇ·Ç°ó¶¨µÄ: onCreate() --> onStartCommand() --> onDestory();
+    onStartCommand()ÊÇÓÃÀ´Ìæ»»onStart()·½·¨µÄ£¬¹È¸è½¨Òé´ó¼ÒÓÃĞÂ·½·¨onStartCommand(),µ«Èç¹ûÄãÈ¥²é¿´Ô´Âë£¬»á·¢ÏÖÆäÊµonStartCommand()·½·¨ÊÇ½´×ÏµÄ: ¹ØÓÚonStartCommand()·µ»ØÖµµÄÎÊÌâ½ÓÏÂÀ´ÔÙËµ¡£
+``` java
+public int onStartCommand(Intent intent, int flags, int startId) {
+    onStart(intent, startId);
+    return mStartCompatibility ? START_STICKY_COMPATIBILITY : START_STICKY;
+}
+```
+ÏÖÔÚÀ´¿´ÓÒ±ßµÄÍ¼£º
+ÓÒ±ßÊÇ°ó¶¨µÄ: onCreate() --> onBind() --> onUnbind() --> onDestory();
+
+ÔÚServiceµÄÉúÃüÖÜÆÚÖĞ£¬onCreate()·½·¨Ö»»á±»µ÷ÓÃÒ»´Î¡£¶øonStartCommand()·½·¨¿ÉÒÔ±»µ÷ÓÃ¶à´Î£¬onBind()µÈ·½·¨Ò²Ö»ÄÜµ÷ÓÃÒ»´Î£¬¼òµ¥À´Ëµ£¬³ıÁËonStartCommand()·½·¨Íâ£¬ÆäËû·½·¨ÔÚÒ»¸öÉúÃüÖÜÆÚÖĞÖ»ÄÜ±»µ÷ÓÃÒ»´Î¡£
+
+####ÏÂÃæÀ´ËµËµÈç¹ûÁ½Õß»ìµ½Ò»ÆğµÄÇé¿ö
+´ËÊ±Ö»Òª¼Ç×¡ÓĞbindµÄÊ±ºò²»ÄÜstop;
+Èç¹ûµ÷ÓÃÁËstartService()£¬ÔòÖ»ÄÜÔÚbindÎªÁãÊ±ÓÃstopServivce()À´½áÊøService;
+
+####IntendService
+
+ServiceÔËĞĞÔÚUIÏß³ÌÖĞ£¬²»ÄÜ·ÃÎÊÍøÂç£¬Ò²²»ÄÜ½øĞĞºÄÊ±µÄ²Ù×÷£¬·ñÔò»á³öÏÖANR¡£ËùÒÔ³öÏÖÁËIntenService¡£
+IntentServiceÊÇÒ»¸ö´¦ÀíÒì²½ÇëÇóµÄÀà£¬ËüÊÇServiceµÄ×ÓÀà£¬ÎÒÃÇ¿ÉÒÔÍ¬ÑùÊ¹ÓÃstartService(intent)À´¿ªÆôËü£¬È»ºóÖØĞ´IntentServiceÖĞµÄonHandleIntent()·½·¨À´Ö´ĞĞÒ»Ğ©ºÄÊ±²Ù×÷¡£
+ĞèÒª×¢ÒâµÄÊÇ£¬IntentServiceÀàÀïÃæÍ¬ÑùÓĞonStartCommand()·½·¨£¬ÄãÒ²¿ÉÒÔÖØĞ´onStartCommand()·½·¨£¬ÕâÓëÆÕÍ¨ServiceÀàÊÇÒ»ÑùµÄ¡£ÔÚIntentServiceÖĞ£¬onStartCommand()·½·¨ÏÈÓÚonHandleIntent()·½·¨Ö´ĞĞ¡£onHandleIntent()·½·¨»áÔÚËüÖ´ĞĞ½áÊøºó×Ô¶¯Ïú»Ù¡£
+
+####¿ç½ø³Ìµ÷ÓÃService
+
+
+
+
+####ServiceÓÅÏÈ¼¶
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
