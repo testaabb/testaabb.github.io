@@ -1,0 +1,22 @@
+permalink: /:title 
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+auto: true
+markdown: redcarpet
+pygments: true
+paginate: 10
+title : 
+tagline: 
+
+author :
+  name : jingwoo
+  email : wujinkui1991@163.com
+  github : jingwoo
+
+production_url : http://jingwoo.github.io
+
+comments :
+  provider : disqus
+  disqus :
+    short_name : jingwoo-blog
+
