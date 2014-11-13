@@ -24,3 +24,8 @@ excerpt: >
 
 如果要在AsyncTask的子类里操作UI，可将Activity的Context在实例化子类时当做参数传递过去。
 另外我尝试启动多次，AsyncTask会将新的任务加入到deque中，不会异常。
+
+```java
+	if(asyncTaskTest.getStatus() == AsyncTask.Status.RUNNING)
+		asyncTaskTest.cancel(true);
+```
