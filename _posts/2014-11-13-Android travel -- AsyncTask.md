@@ -18,6 +18,7 @@ excerpt: >
         Result：返回值类型
         
 2.必须实现doInBackground()方法，可根据需要实现onProgressUpdate(),onPreExecute(),onPostExecute()方法。这些方法只能由系统负责调用。  
+
 3.在主线程中调用AsyncTask实例的execute()方法。
 
 ####其他有的没的
