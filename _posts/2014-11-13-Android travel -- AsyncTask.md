@@ -24,6 +24,7 @@ excerpt: >
 ####其他有的没的
 
 如果要在AsyncTask的子类里操作UI，可将Activity的Context在实例化子类时当做参数传递过去。  
+多次执行会报java.lang.IllegalStateException: Cannot execute task: the task is already running.bug，当然，如果每次都是新new出来的就没问题，不过新任务会在旧任务执行完毕后再开始。
 
 
 ```java
