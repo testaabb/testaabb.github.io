@@ -1,29 +1,30 @@
 ---
 layout: post
-title: AndroidÖ®ÂÃ£¨Èý£© -- AsyncTask
+title: Androidä¹‹æ—…ï¼ˆä¸‰ï¼‰ -- AsyncTask
 category: Android
 tags: [Android]
 excerpt: >
-  ½ñÌìÀ´ËµÒ»ËµAsyncTask
+  ä»Šå¤©æ¥è¯´ä¸€è¯´AsyncTask
 ---
 
-½ñÌìÀ´ËµÒ»ËµAsyncTask
+ä»Šå¤©æ¥è¯´ä¸€è¯´AsyncTask
 
-####AsyncTaskµÄÊµÏÖ
+####AsyncTaskçš„å®žçŽ°
 
-1.´´½¨AsyncTaskµÄ×ÓÀà£¬ÎªÈý¸ö·ºÐÍ²ÎÊýÖ¸¶¨ÀàÐÍ£¬Èç²»ÐèÒªÔòÎªvoid¡£
-    Èý¸ö²ÎÊý
-        Params£ºÊäÈëÀàÐÍ
-        Progress£º½ø¶ÈÖµÀàÐÍ
-        Result£º·µ»ØÖµÀàÐÍ
+1.åˆ›å»ºAsyncTaskçš„å­ç±»ï¼Œä¸ºä¸‰ä¸ªæ³›åž‹å‚æ•°æŒ‡å®šç±»åž‹ï¼Œå¦‚ä¸éœ€è¦åˆ™ä¸ºvoidã€‚
+    ä¸‰ä¸ªå‚æ•°
+        Paramsï¼šè¾“å…¥ç±»åž‹
+        Progressï¼šè¿›åº¦å€¼ç±»åž‹
+        Resultï¼šè¿”å›žå€¼ç±»åž‹
         
-2.±ØÐëÊµÏÖdoInBackground()·½·¨£¬¿É¸ù¾ÝÐèÒªÊµÏÖonProgressUpdate(),onPreExecute(),onPostExecute()·½·¨¡£ÕâÐ©·½·¨Ö»ÄÜÓÉÏµÍ³¸ºÔðµ÷ÓÃ¡£
-3.ÔÚÖ÷Ïß³ÌÖÐµ÷ÓÃAsyncTaskÊµÀýµÄexecute()·½·¨¡£
+2.å¿…é¡»å®žçŽ°doInBackground()æ–¹æ³•ï¼Œå¯æ ¹æ®éœ€è¦å®žçŽ°onProgressUpdate(),onPreExecute(),onPostExecute()æ–¹æ³•ã€‚è¿™äº›æ–¹æ³•åªèƒ½ç”±ç³»ç»Ÿè´Ÿè´£è°ƒç”¨ã€‚  
 
-####ÆäËûÓÐµÄÃ»µÄ
+3.åœ¨ä¸»çº¿ç¨‹ä¸­è°ƒç”¨AsyncTaskå®žä¾‹çš„execute()æ–¹æ³•ã€‚
 
-Èç¹ûÒªÔÚAsyncTaskµÄ×ÓÀàÀï²Ù×÷UI£¬¿É½«ActivityµÄContextÔÚÊµÀý»¯×ÓÀàÊ±µ±×ö²ÎÊý´«µÝ¹ýÈ¥¡£
-ÁíÍâÎÒ³¢ÊÔÆô¶¯¶à´Î£¬AsyncTask»á½«ÐÂµÄÈÎÎñ¼ÓÈëµ½dequeÖÐ£¬²»»áÒì³£¡£
+####å…¶ä»–æœ‰çš„æ²¡çš„
+
+å¦‚æžœè¦åœ¨AsyncTaskçš„å­ç±»é‡Œæ“ä½œUIï¼Œå¯å°†Activityçš„Contextåœ¨å®žä¾‹åŒ–å­ç±»æ—¶å½“åšå‚æ•°ä¼ é€’è¿‡åŽ»ã€‚  
+å¦å¤–æˆ‘å°è¯•å¯åŠ¨å¤šæ¬¡ï¼ŒAsyncTaskä¼šå°†æ–°çš„ä»»åŠ¡åŠ å…¥åˆ°dequeä¸­ï¼Œä¸ä¼šå¼‚å¸¸ã€‚
 
 ```java
 	if(asyncTaskTest.getStatus() == AsyncTask.Status.RUNNING)
