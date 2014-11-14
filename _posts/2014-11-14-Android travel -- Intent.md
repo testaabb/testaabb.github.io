@@ -12,18 +12,21 @@ Intent传值：
         被传递的类要implement Serializable
         不能传Bitmap
 实现：
-    CurrentActivity类中
 
-`
+CurrentActivity类中
+
+```java
 Intent intent = new Intent(CurrentActivity.this, ResultActivity.class);
 Bundle bundle = new Bundle();
 intent.putSerializable("标记key", 被传递对象的实例);
 intent.putExtras(bundle);
 startActivity(intent);
-`
+```
 
-   ResultActivity类中
+ResultActivity类中
 	
-`
+```java
 被传递对象的实例 = (被传对象)getIntent.getSerialzable("key");
-`
+```
+		
+
