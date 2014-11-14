@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Android之旅（四） -- Intent
 category: Android
