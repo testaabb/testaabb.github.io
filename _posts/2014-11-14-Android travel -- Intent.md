@@ -1,28 +1,28 @@
----
+ï»¿---
 layout: post
-title: AndroidÖ®ÂÃ£¨ËÄ£© -- Intent
+title: Androidä¹‹æ—…ï¼ˆå››ï¼‰ -- Intent
 category: Android
 tags: [Android]
 excerpt: >
-  Intent´«Öµ£º
+  Intentä¼ å€¼ï¼š
 ---
 
-Intent´«Öµ£º
-×¢Òâ£º
-        ±»´«µİµÄÀàÒªimplement Serializable
-        ²»ÄÜ´«Bitmap
-ÊµÏÖ£º
-        CurrentActivityÀàÖĞ
+Intentä¼ å€¼ï¼š
+æ³¨æ„ï¼š
+        è¢«ä¼ é€’çš„ç±»è¦implement Serializable
+        ä¸èƒ½ä¼ Bitmap
+å®ç°ï¼š
+        CurrentActivityç±»ä¸­
 
         ```java
         Intent intent = new Intent(CurrentActivity.this, ResultActivity.class);
         Bundle bundle = new Bundle();
-        intent.putSerializable("±ê¼Çkey", ±»´«µİ¶ÔÏóµÄÊµÀı);
+        intent.putSerializable("æ ‡è®°key", è¢«ä¼ é€’å¯¹è±¡çš„å®ä¾‹);
         intent.putExtras(bundle);
         startActivity(intent);
         ```
 
-        ResultActivityÀàÖĞ
+        ResultActivityç±»ä¸­
         ```java
-        ±»´«µİ¶ÔÏóµÄÊµÀı = (±»´«¶ÔÏó)getIntent.getSerialzable("key");
+        è¢«ä¼ é€’å¯¹è±¡çš„å®ä¾‹ = (è¢«ä¼ å¯¹è±¡)getIntent.getSerialzable("key");
         ```
