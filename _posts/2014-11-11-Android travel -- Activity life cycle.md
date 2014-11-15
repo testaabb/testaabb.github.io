@@ -14,7 +14,7 @@ excerpt: >
 
 ![_config.yml]({{ site.baseurl }}/images/Activity life cycle.gif)  
 
-####先来说说各个方法吧：
+####来说说各个方法吧：
 
 onCreate():创建Activity时被回调，只会被调用一次。  
 onStart():启动Activity时被回调。  
@@ -25,7 +25,7 @@ onStop():停止Activity时被回调，停止状态。
 onDestory():销毁Activity时被回调，销毁状态。  
 不理解没关系，继续往下看。  
 
-####再来按照箭头说说流程：
+####再来按照箭头说流程：
 1. 中间主流程箭头：onCreate()-->onStart()-->onResume()-->onPause()-->onStop()-->onDestory()
     共6个流程，两两从中间对称，这个没什么好说的，打开Activity然后关闭（Back键），中间不进行任何多余操作，直接走完一个完整的生命周期。
 2. 最右侧的箭头：从onStop()开始(在Activity界面按Home键后调用onStop())，再次进入Activity:onRestart()-->onStart()-->onResume()
@@ -34,4 +34,4 @@ onDestory():销毁Activity时被回调，销毁状态。
 5. 右侧onPause()开始的箭头：当Activity失去焦点后再次获得焦点，Activity进入活动状态调用onResume()方法。  
 
 ####现在说说在实际项目中的应用：
-从流程中可以看出，onPause()是相对重要的，因为这是我们可以操作Activity的最后一道屏障。比如当前Activity处于活动状态，当电话进来，关机或者在最近任务中结束掉此进程，onPause()方法都会被调用。所以我们可以再onPause()中保存数据，清除Text监听==。
+从流程中可以看出，onPause()是相对重要的，因为这是我们可以操作Activity的最后一道屏障。比如当前Activity处于活动状态，当电话进来，长按关机键弹出关机对话框或者在最近任务中结束掉此进程，onPause()方法都会被调用。所以我们可以再onPause()中保存数据，清除Text监听==。
