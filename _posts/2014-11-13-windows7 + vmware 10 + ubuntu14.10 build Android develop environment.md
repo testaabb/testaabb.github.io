@@ -9,6 +9,8 @@ excerpt: >
     sudo su --> password
 ---
 
+此文不是手把手教你如何搭建，当然，如果在搭建过程中遇到什么问题，可以尝试在这里找找。
+
 linux获取root权限：
 
     sudo su --> password
