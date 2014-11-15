@@ -4,9 +4,7 @@ title: windows7 + vmware 10 + ubuntu14.10下搭载Android开发环境
 category: Android
 tags: [Android]
 excerpt: >
-  linux获取root权限：
-
-    sudo su --> password
+  此文不是手把手教你如何搭建，当然，如果在搭建过程中遇到什么问题，可以尝试在这里找找。
 ---
 
 此文不是手把手教你如何搭建，当然，如果在搭建过程中遇到什么问题，可以尝试在这里找找。
