@@ -80,3 +80,9 @@ linux获取root权限：
     windows --> Preferences --> General --> Keys 
     搜索Word Completion取消Alt+/绑定。
     搜索Content Assist绑定Alt+/。
+
+Ctrl+Alt+Up/Down
+
+    System Settings --> keyboard --> Shortcuts --> Navigation --> Switch to workspace above/below
+
+

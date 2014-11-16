@@ -45,6 +45,8 @@ IntentService是一个处理异步请求的类，它是Service的子类，我们
 
 
 
+
+
 ####Service优先级
 
 
