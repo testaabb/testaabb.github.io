@@ -28,11 +28,14 @@ View类的内部接口：
 	内部类形式  
 	外部类形式  
 	Activity本身作事件监听器  
-		btn.setOnClickListener(this);  
-		@Override  
-		public void onClick(View v){  
-			...;  
-		}  
+	
+```java
+btn.setOnClickListener(this);  
+	@Override  
+	public void onClick(View v){  
+	...;  
+}  
+```
 	匿名内部类形式  
 	直接绑定到标签（增加耦合，不建议）  
   
