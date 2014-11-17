@@ -35,7 +35,7 @@ btn.setOnClickListener(this);
 	public void onClick(View v){  
 	...;  
 }  
-```  
+```
 
 	匿名内部类形式  
 	直接绑定到标签（增加耦合，不建议）  
