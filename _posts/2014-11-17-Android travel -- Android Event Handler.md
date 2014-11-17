@@ -4,7 +4,7 @@ title: Android之旅（五） -- 事件处理机制
 category: Android
 tags: [Android]
 excerpt: >
-  安卓事件处理机制：
+  安卓事件处理机制： 
 ---
 
 安卓事件处理机制：
