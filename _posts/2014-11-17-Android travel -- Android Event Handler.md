@@ -24,21 +24,21 @@ View类的内部接口：
 	OnLongClickListener  
 	OnTouchListener  
 	
-实现事件监听器：
-	内部类形式
-	外部类形式
-	Activity本身作事件监听器
-		btn.setOnClickListener(this);
-		@Override
-		public void onClick(View v){
-			...;
-		}
-	匿名内部类形式
-	直接绑定到标签（增加耦合，不建议）
-
-基于回调的事件传播：
-	组件的事件监听器 --> 事件回调方法 --> 组件所在的Activity（该Activity包含的所有组件）
+实现事件监听器：  
+	内部类形式  
+	外部类形式  
+	Activity本身作事件监听器  
+		btn.setOnClickListener(this);  
+		@Override  
+		public void onClick(View v){  
+			...;  
+		}  
+	匿名内部类形式  
+	直接绑定到标签（增加耦合，不建议）  
+  
+基于回调的事件传播：  
+	组件的事件监听器 --> 事件回调方法 --> 组件所在的Activity（该Activity包含的所有组件）  
 	
-获取系统的Configuration：Configuration config = getResources().getConfiguration();
-设置屏幕方向：setRequestOrientation(int);
-重写onConfigurationChanged(Configuration newConfig);
+获取系统的Configuration：Configuration config = getResources().getConfiguration();  
+设置屏幕方向：setRequestOrientation(int);  
+重写onConfigurationChanged(Configuration newConfig);  
