@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Android之旅（五） -- 事件处理机制
 category: Android
@@ -16,13 +16,13 @@ excerpt: >
 	Event（事件）：由系统封装。
 	Event Listener（事件监听器）：监听事件源所发生的事件，并作出相应的相应。
 	
-View类的内部接口：
-	OnClickListener
-	OnCreateContextMenuListener
-	OnFocusChangeListener
-	OnKeyListener
-	OnLongClickListener
-	OnTouchListener
+View类的内部接口：  
+	OnClickListener  
+	OnCreateContextMenuListener  
+	OnFocusChangeListener  
+	OnKeyListener  
+	OnLongClickListener  
+	OnTouchListener  
 	
 实现事件监听器：
 	内部类形式
