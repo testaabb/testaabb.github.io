@@ -11,12 +11,12 @@ tagline:
 author :
   name : kui2015
   email : wujinkui1991@163.com
-  github : jingwoo
+  github : kui2015
 
-production_url : http://jingwoo.github.io
+production_url : http://kui2015.github.io
 
 comments :
   provider : disqus
   disqus :
-    short_name : jingwoo-blog
+    short_name : kui2015-blog
 
