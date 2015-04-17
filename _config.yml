@@ -21,7 +21,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : stormzhang.com
+production_url : wujinkui.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -78,7 +78,7 @@ codepiano :
   comments :
     provider : disqus
     disqus :
-      short_name : stormsblog
+      short_name : kui2015
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
