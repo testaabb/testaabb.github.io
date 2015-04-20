@@ -10,7 +10,8 @@ tags: [Android]
 终于可以开始写点东西啦。想起什么就写点什么，先来说说activity的生命周期吧。说到Activity的生命周期，就必须提到一张图。就是这个：
 
 <img src="/images/Activity life cycle.png"/>
-![_config.yml]({{ site.baseurl }}/images/Activity life cycle.png)  
+![_config.yml]({{ site.baseurl }}/images/Activity life cycle.png)
+![_config.yml]({{ site.baseurl }}/images/Activity life cycle.gif) 
 
 ####来说说各个方法吧：
 
