@@ -3,8 +3,8 @@ layout: post
 keywords: blog
 description: blog
 title: "Material Design调色板"
-categories: [Design]
-tags: [Material]
+categories: [Android]
+tags: [Android]
 ---
 {% include codepiano/setup %}
 
