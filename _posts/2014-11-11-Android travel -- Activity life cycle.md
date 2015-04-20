@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Android之旅（一） -- Activity生命周期
 category: Android
@@ -10,7 +10,7 @@ tags: [Android]
 终于可以开始写点东西啦。想起什么就写点什么，先来说说activity的生命周期吧。说到Activity的生命周期，就必须提到一张图。就是这个：
 
 
-![_config.yml]({{ site.baseurl }}/images/Activity life cycle.gif)  
+![_config.yml]({{ site.baseurl }}/image/Activity life cycle.png)  
 
 ####来说说各个方法吧：
 
