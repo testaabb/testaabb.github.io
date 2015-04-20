@@ -8,15 +8,15 @@ group: static
 
 {% highlight ruby %}
 name = 'Storm'
-real_name = 'wujinkui'
+real_name = '张奇'
 
-company = '群硕软件'
+company = '薄荷信息科技'
 title = '软件工程师'
-skills = 'android, java, git, sql, ios'
+skills = 'android, java, ruby, git, sql'
 
-email = 'wujinkui$#163.com'.gsub('$#', '@')
-blog = 'http://kui2015.github.io'
-github = 'https://github.com/kui2015'
+email = 'zhangqi.dev$#qq.com'.gsub('$#', '@')
+blog = 'http://stormzhang.github.io'
+github = 'https://github.com/stormzhang'
 
 while true
   programing
