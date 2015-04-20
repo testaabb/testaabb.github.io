@@ -18,9 +18,4 @@ email = 'wujinkui2015$#163.com'.gsub('$#', '@')
 blog = 'http://kui2015.github.io'
 github = 'https://github.com/kui2015'
 
-while true
-  programing
-  reading
-  enjoying
-end
 {% endhighlight %}
