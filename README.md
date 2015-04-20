@@ -1,11 +1,11 @@
 ## wujinkui的个人博客
 
-基于jekyll的个人博客站点[http://wujinkui.com](http://wujinkui.com)
-Follow stormzhang
 
 ## 关于我
 
-Android开发者
+   Android, iOS开发者。
+
+   喜欢ruby, 活跃在全球最大同志交友网站----[Github](https://github.com/wujinkui)
 
 ## 联系我
 
