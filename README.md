@@ -1,4 +1,4 @@
-## wujinkui的个人博客
+## Aaron Wu的个人博客
 
 
 ## 关于我
@@ -9,4 +9,4 @@
 
 ## 联系我
 
-* Github: [kui2015](https://github.com/wujinkui)
+* Github: [Aaron Wu](https://github.com/wujinkui)

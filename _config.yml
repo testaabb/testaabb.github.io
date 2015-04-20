@@ -3,12 +3,12 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
-paginate: 25
+paginate: 20
 
 title : Keep Moving
 tagline: 
 author :
-  name : kui2015
+  name : Aaron Wu的博客
   description: Android, iOS Developer
   email : wujinkui2015@163.com
   github : https://github.com/kui2015
