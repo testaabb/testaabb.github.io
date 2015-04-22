@@ -15,9 +15,9 @@ tags: [NDK]
 
 2. 在MainActivity.java中添加代码
 
-    {% highlight java %}
+	{% highlight java %}
 	
-    	static{
+		static{
 			System.loadLibrary("hello");//加载lib包
 		}
 
@@ -88,7 +88,7 @@ tags: [NDK]
 
 	{% endhighlight %}
 
-    Application.mk
+	Application.mk
 
 	{% highlight ruby %}
 
@@ -114,8 +114,8 @@ tags: [NDK]
 
 	{% highlight ruby %}
 
-    Toast.makeText(this, helloJni(), Toast.LENGTH_LONG).show();
+	Toast.makeText(this, helloJni(), Toast.LENGTH_LONG).show();
 
 	{% endhighlight %}
 
-    运行项目，弹出Toast--"Hello from JNI !"
+	运行项目，弹出Toast--"Hello from JNI !"
