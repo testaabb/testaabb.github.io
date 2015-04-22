@@ -5,7 +5,7 @@
 
    Android, iOS开发者。
 
-   喜欢ruby, 活跃在全球最大同志交友网站----[Github](https://github.com/wujinkui)
+   活跃在全球最大同志交友网站----[Github](https://github.com/wujinkui)
 
 ## 联系我
 
