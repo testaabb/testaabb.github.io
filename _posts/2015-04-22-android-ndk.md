@@ -104,7 +104,7 @@ APP_ABI := all#Application Binary Interface,因为代码很少，所以选择了
 
 编译成功后此时项目目录结构如下：
 
-<img src="/image/NDKTest_Package_Explorer_After_Compile.png" />
+<img src="/image/After_Compile.png" />
 
 如果编译失败，在重新编译前，要删除obj文件夹
 
