@@ -17,17 +17,17 @@ tags: [NDK]
 
 {% highlight java %}
 
-	static{
-		System.loadLibrary("hello");//加载lib包
-	}
+static{
+	System.loadLibrary("hello");//加载lib包
+}
 
-	public native String helloJni();//需要在c代码里实现的方法
+public native String helloJni();//需要在c代码里实现的方法
 	
 {% endhighlight %}
 
 三. 创建jni文件夹
 
-打开终端，切换到当前项目目录
+打开终端，切换到当前项目目录,输入：
 
 	mkdir jni //在当前目录下创建"jni"文件夹，此命令mac和windows通用
 
@@ -47,12 +47,14 @@ Tip:
 	javah -classpath bin/classes -d jni com.wujinkui.ndktest.MainActivity
 	
 -classpath 用于装入类的路径，所以后面的bin/classes就是路径
+
 -d         输出目录，这里是jni
+
 -jni       默认的，不写也行
 
-运行成功后可以在jni文件夹下看到名为com_wujinkui_ndktest_MainActivity.h的头文件。
+运行成功后刷新项目，可以在jni文件夹下看到名为com_wujinkui_ndktest_MainActivity.h的头文件。
 
-五. 编写c代码实现
+五. 编写c代码
 
 在jni文件夹下新建一个c文件，hello.c
 
