@@ -15,13 +15,13 @@ tags: [NDK]
 
 2. 在MainActivity.java中添加代码
 
-	{% highlight java %}
-		
-		public native String helloJni();//需要在c代码里实现的方法
-
-		static{
+    {% highlight java %}
+	
+    	static{
 			System.loadLibrary("hello");//加载lib包
 		}
+
+		public native String helloJni();//需要在c代码里实现的方法
 		
 	{% endhighlight %}
 
@@ -73,7 +73,7 @@ tags: [NDK]
 
 	在官方的ndk samples里面有一个hello-jni的Project，将jni文件夹下的Android.mk和Applicaiton.mk拷贝到自己项目的jni文件夹下。
 
-	Android.mk
+    Android.mk
 
 	{% highlight ruby %}
 
@@ -88,7 +88,7 @@ tags: [NDK]
 
 	{% endhighlight %}
 
-	Application.mk
+    Application.mk
 
 	{% highlight ruby %}
 
@@ -114,8 +114,8 @@ tags: [NDK]
 
 	{% highlight ruby %}
 
-	Toast.makeText(this, helloJni(), Toast.LENGTH_LONG).show();
+    Toast.makeText(this, helloJni(), Toast.LENGTH_LONG).show();
 
 	{% endhighlight %}
 
-	运行项目，弹出Toast--"Hello from JNI !"
+    运行项目，弹出Toast--"Hello from JNI !"
