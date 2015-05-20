@@ -3,7 +3,7 @@
 
 ## 关于我
 
-   Android, iOS开发者。
+   Android开发者。
 
    活跃在全球最大同志交友网站----[Github](https://github.com/wujinkui)
 
